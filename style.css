@@ -105,3 +105,76 @@ body{
   background: white;
   padding: 5px;
 }
+
+.natok {
+  background-color: #121822;
+  margin: 10px auto;
+  padding: 15px;
+  width: 300px;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.natok-card {
+  background: #121822;
+  color: white;
+  padding: 15px;
+  margin: 10px auto;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  display: none;
+}
+.natok-card:hover {
+  background: #1c2636;
+}
+
+.c1{
+  
+  color: #139AFF;
+  margin-left: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  
+}
+
+.natok-card {
+  background: #121822;
+  color: white;
+  padding: 15px;
+  margin: 15px auto;
+  width: 300px;
+  text-align: center;
+  border-radius: 12px;
+  display: none; /* Hide by default for search */
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.natok-img {
+  width: 60%;
+  border-radius: 8px;
+  
+}
+
+.natok-title {
+  margin: 10px 0;
+  font-size: 18px;
+  color: white;
+}
+
+.watch-btn {
+  background-color: #4D07C0;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 14px;
+  display: inline-block;
+  margin-top: 8px;
+  transition: 0.3s;
+}
+
+.watch-btn:hover {
+  background-color: #001f99;
+}
