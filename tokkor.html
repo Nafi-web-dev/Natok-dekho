@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Natok Dekho - Tokkor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <!-- Plyr CSS -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+
+  <style>
+    body {
+      background-color: #001725;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .video-player {
+      width: 380px;
+      max-width: 100%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* Make volume slider smaller */
+    .plyr__volume input[type='range'] {
+      max-width: 60px !important;
+    }
+
+    /* Allow rotation in fullscreen */
+    video:-webkit-full-screen {
+      writing-mode: horizontal-tb !important;
+    }
+
+    @media screen and (orientation: landscape) {
+      body {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-player">
+    <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="Pmbz7MilpHo"></div>
+  </div>
+
+  <!-- Plyr JS -->
+  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+  <script>
+    const player = new Plyr('#player');
+  </script>
+
+</body>
+</html>
