@@ -22,6 +22,66 @@
 <hr class="hr">
 <hr class="hr">
 <br>
+
+<div style="text-align: center; margin: 20px;">
+  <input type="text" id="searchBox" placeholder="Search Natok..." style="padding: 10px; width: 250px; border-radius: 5px; border: none;">
+</div>
+
+<div class="natok-card">
+  <img src="images (40) (8).jpeg" alt="Tokkor" class="natok-img">
+  <h3 class="natok-title">Tokkor</h3>
+  <a href="tokkor.html" target="_blank" class="watch-btn"><b>▶ Watch Now </b></a>
+</div>
+
+<div class="natok-card">
+  <img src="images (40) (10).jpeg" alt="Autopass GPA5" class="natok-img">
+  <h3 class="natok-title">Autopass GPA5</h3>
+  <a href="Autopass Gpa 5.html" target="_blank" class="watch-btn"><b>▶ Watch Now </b></a>
+</div>
+<div class="natok-card">
+  <img src="images (40) (11).jpeg" alt="OverSmart" class="natok-img">
+  <h3 class="natok-title">OverSmart</h3>
+  <a href="oversmart.html" target="_blank" class="watch-btn"><b>▶ Watch Now </b></a>
+</div>
+
+<div class="natok-card">
+  <img src="images (40) (9).jpeg" alt="chore sone..." class="natok-img">
+  <h3 class="natok-title">Chore Sone Dhormer Kahani</h3>
+  <a href="choresone.html" target="_blank" class="watch-btn"><b>▶ Watch Now </b></a>
+</div>
+
+<div class="natok-card">
+  <img src="images (40) (12).jpeg" alt="BCS 2" class="natok-img">
+  <h3 class="natok-title">BCS 2</h3>
+  <a href="BCS 2.html" target="_blank" class="watch-btn"><b>▶ Watch Now </b></a>
+</div>
+</div>
+<script>
+  const searchInput = document.getElementById('searchBox');
+  const cards = document.querySelectorAll('.natok-card');
+
+  // Hide all on load
+  window.onload = () => {
+    cards.forEach(card => card.style.display = 'none');
+  };
+
+  // On search input
+  searchInput.addEventListener('keyup', function () {
+    const value = searchInput.value.toLowerCase();
+
+    if (value.length < 3) {
+      // Hide all if less than 3 letters
+      cards.forEach(card => card.style.display = 'none');
+    } else {
+      // Show matching cards
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(value) ? 'block' : 'none';
+      });
+    }
+  });
+</script>
+
 <h4 style="display: inline; padding-left: 5px; ">Trending now 🔥</h4
   > 
 
