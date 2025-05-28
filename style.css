@@ -168,7 +168,7 @@ body{
   background-color: #4D07C0;
   color: white;
   text-decoration: none;
-  padding: 8px 16px;
+  padding: 11px 16px;
   border-radius: 14px;
   display: inline-block;
   margin-top: 8px;
@@ -177,4 +177,26 @@ body{
 
 .watch-btn:hover {
   background-color: #001f99;
+}
+
+@media (min-width: 768px) {
+  .name {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .name img {
+    height: 180px;
+    width: auto;
+    margin-right: 106px;
+  }
+
+  h4 {
+    font-size: 20px;
+    
+  }
+  table h4 {
+    margin-right: 106px;
+  }
 }
