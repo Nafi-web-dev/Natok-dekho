@@ -200,3 +200,26 @@ body{
     margin-right: 106px;
   }
 }
+
+.natok-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#searchBox:focus {
+  outline: none;
+  box-shadow: 0 0 10px #F3E231;
+  transition: box-shadow 0.3s ease;
+}
+
+.watch-btn:hover {
+  box-shadow: 0 0 10px  #EADA36;
+}
