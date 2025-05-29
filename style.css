@@ -223,3 +223,53 @@ body{
 .watch-btn:hover {
   box-shadow: 0 0 10px  #EADA36;
 }
+
+
+
+
+
+
+.fade-text {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #e91e63;
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(20px); }
+}
+
+
+
+   .typewriter {
+      
+      font-family: Bold;
+      padding-left: 6px;
+      padding-top: 0px;
+     
+    }
+
+    .typewriter {
+      font-size: 25px;
+      font-weight: bold;
+      color: #F1DB09;
+       font-family: Bold;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #000000;
+      display: inline-block;
+      animation: blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes blink-caret {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: #09B0F1;
+      }
+    }
