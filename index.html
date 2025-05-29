@@ -23,6 +23,7 @@
 <hr class="hr">
 <br>
 
+
 <div style="text-align: center; margin: 20px;">
   <input type="text" id="searchBox" placeholder="Search Natok..." style="padding: 10px; width: 250px; border-radius: 5px; border: none;">
 </div>
@@ -30,41 +31,664 @@
 <div class="natok-card">
   <img src="images (40) (8).jpeg" alt="Tokkor" class="natok-img">
   <h3 class="natok-title">Tokkor</h3>
+  
+  
+  <style>
+  .star-rating {
+    direction: rtl;
+    display: inline-flex;
+    font-size: 24px;
+    user-select: none;
+  }
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  .star-rating label {
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 3px;
+  }
+  .star-rating input[type="radio"]:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: gold;
+  }
+
+  .custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  @keyframes fadein {
+    from {opacity: 0; top: 0;}
+    to {opacity: 1; top: 20px;}
+  }
+
+  @keyframes fadeout {
+    from {opacity: 1; top: 20px;}
+    to {opacity: 0; top: 0;}
+  }
+</style>
+
+
+  <!-- ⭐ Star Rating -->
+  <div  class="star-rating">
+    <input  type="radio" id="5-stars-tokkor" name="rating-tokkor" value="5">
+    <label for="5-stars-tokkor">★</label>
+    <input type="radio" id="4-stars-tokkor" name="rating-tokkor" value="4">
+    <label for="4-stars-tokkor">★</label>
+    <input type="radio" id="3-stars-tokkor" name="rating-tokkor" value="3">
+    <label for="3-stars-tokkor">★</label>
+    <input type="radio" id="2-stars-tokkor" name="rating-tokkor" value="2">
+    <label for="2-stars-tokkor">★</label>
+    <input type="radio" id="1-star-tokkor" name="rating-tokkor" value="1">
+    <label for="1-star-tokkor">★</label>
+  </div>
+
+
+
+
+<!-- Custom Alert -->
+<div id="customAlert" class="custom-alert">You rated this 5 stars!</div>
+
+<script>
+  const ratings = document.querySelectorAll('.star-rating input');
+  const alertBox = document.getElementById('customAlert');
+
+  ratings.forEach(radio => {
+    radio.addEventListener('change', function () {
+      showAlert(`You rated this ${this.value} star${this.value > 1 ? 's' : ''}!`);
+    });
+  });
+
+  function showAlert(message) {
+    alertBox.textContent = message;
+    alertBox.style.display = 'block';
+
+    setTimeout(() => {
+      alertBox.style.display = 'none';
+    }, 3000);
+  }
+</script>
+  <br>
+  
   <a href="tokkor.html" target="_blank" class="watch-btn"><b>▶ Watch Now </b></a>
 </div>
 
 <div class="natok-card">
   <img src="images (40) (10).jpeg" alt="Autopass GPA5" class="natok-img">
   <h3 class="natok-title">Autopass GPA5</h3>
+  
+  <style>
+  .star-rating {
+    direction: rtl;
+    display: inline-flex;
+    font-size: 24px;
+    user-select: none;
+  }
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  .star-rating label {
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 3px;
+  }
+  .star-rating input[type="radio"]:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: gold;
+  }
+
+  .custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  @keyframes fadein {
+    from {opacity: 0; top: 0;}
+    to {opacity: 1; top: 20px;}
+  }
+
+  @keyframes fadeout {
+    from {opacity: 1; top: 20px;}
+    to {opacity: 0; top: 0;}
+  }
+</style>
+
+
+  <!-- ⭐ Star Rating -->
+  <div  class="star-rating">
+    <input  type="radio" id="5-stars-tokkor" name="rating-tokkor" value="5">
+    <label for="5-stars-tokkor">★</label>
+    <input type="radio" id="4-stars-tokkor" name="rating-tokkor" value="4">
+    <label for="4-stars-tokkor">★</label>
+    <input type="radio" id="3-stars-tokkor" name="rating-tokkor" value="3">
+    <label for="3-stars-tokkor">★</label>
+    <input type="radio" id="2-stars-tokkor" name="rating-tokkor" value="2">
+    <label for="2-stars-tokkor">★</label>
+    <input type="radio" id="1-star-tokkor" name="rating-tokkor" value="1">
+    <label for="1-star-tokkor">★</label>
+  </div>
+
+
+
+
+<!-- Custom Alert -->
+<div id="customAlert" class="custom-alert">You rated this 5 stars!</div>
+
+<script>
+  const ratings = document.querySelectorAll('.star-rating input');
+  const alertBox = document.getElementById('customAlert');
+
+  ratings.forEach(radio => {
+    radio.addEventListener('change', function () {
+      showAlert(`You rated this ${this.value} star${this.value > 1 ? 's' : ''}!`);
+    });
+  });
+
+  function showAlert(message) {
+    alertBox.textContent = message;
+    alertBox.style.display = 'block';
+
+    setTimeout(() => {
+      alertBox.style.display = 'none';
+    }, 3000);
+  }
+</script>
+  <br>
   <a href="Autopass Gpa 5.html" target="_blank" class="watch-btn"><b>▶ Watch Now </b></a>
 </div>
 <div class="natok-card">
   <img src="images (40) (11).jpeg" alt="OverSmart" class="natok-img">
   <h3 class="natok-title">OverSmart</h3>
+  
+  <style>
+  .star-rating {
+    direction: rtl;
+    display: inline-flex;
+    font-size: 24px;
+    user-select: none;
+  }
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  .star-rating label {
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 3px;
+  }
+  .star-rating input[type="radio"]:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: gold;
+  }
+
+  .custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  @keyframes fadein {
+    from {opacity: 0; top: 0;}
+    to {opacity: 1; top: 20px;}
+  }
+
+  @keyframes fadeout {
+    from {opacity: 1; top: 20px;}
+    to {opacity: 0; top: 0;}
+  }
+</style>
+
+
+  <!-- ⭐ Star Rating -->
+  <div class="star-rating">
+    <input type="radio" id="5-stars-tokkor" name="rating-tokkor" value="5">
+    <label for="5-stars-tokkor">★</label>
+    <input type="radio" id="4-stars-tokkor" name="rating-tokkor" value="4">
+    <label for="4-stars-tokkor">★</label>
+    <input type="radio" id="3-stars-tokkor" name="rating-tokkor" value="3">
+    <label for="3-stars-tokkor">★</label>
+    <input type="radio" id="2-stars-tokkor" name="rating-tokkor" value="2">
+    <label for="2-stars-tokkor">★</label>
+    <input type="radio" id="1-star-tokkor" name="rating-tokkor" value="1">
+    <label for="1-star-tokkor">★</label>
+  </div>
+
+
+
+
+<!-- Custom Alert -->
+<div id="customAlert" class="custom-alert">You rated this 5 stars!</div>
+
+<script>
+  const ratings = document.querySelectorAll('.star-rating input');
+  const alertBox = document.getElementById('customAlert');
+
+  ratings.forEach(radio => {
+    radio.addEventListener('change', function () {
+      showAlert(`You rated this ${this.value} star${this.value > 1 ? 's' : ''}!`);
+    });
+  });
+
+  function showAlert(message) {
+    alertBox.textContent = message;
+    alertBox.style.display = 'block';
+
+    setTimeout(() => {
+      alertBox.style.display = 'none';
+    }, 3000);
+  }
+</script>
+<br>
+  
   <a href="oversmart.html" target="_blank" class="watch-btn"><b>▶ Watch Now </b></a>
 </div>
 
 <div class="natok-card">
   <img src="images (40) (9).jpeg" alt="chore sone..." class="natok-img">
   <h3 class="natok-title">Chore Sone Dhormer Kahani</h3>
+  
+  <style>
+  .star-rating {
+    direction: rtl;
+    display: inline-flex;
+    font-size: 24px;
+    user-select: none;
+  }
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  .star-rating label {
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 3px;
+  }
+  .star-rating input[type="radio"]:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: gold;
+  }
+
+  .custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  @keyframes fadein {
+    from {opacity: 0; top: 0;}
+    to {opacity: 1; top: 20px;}
+  }
+
+  @keyframes fadeout {
+    from {opacity: 1; top: 20px;}
+    to {opacity: 0; top: 0;}
+  }
+</style>
+
+
+  <!-- ⭐ Star Rating -->
+  <div class="star-rating">
+    <input type="radio" id="5-stars-tokkor" name="rating-tokkor" value="5">
+    <label for="5-stars-tokkor">★</label>
+    <input type="radio" id="4-stars-tokkor" name="rating-tokkor" value="4">
+    <label for="4-stars-tokkor">★</label>
+    <input type="radio" id="3-stars-tokkor" name="rating-tokkor" value="3">
+    <label for="3-stars-tokkor">★</label>
+    <input type="radio" id="2-stars-tokkor" name="rating-tokkor" value="2">
+    <label for="2-stars-tokkor">★</label>
+    <input type="radio" id="1-star-tokkor" name="rating-tokkor" value="1">
+    <label for="1-star-tokkor">★</label>
+  </div>
+
+
+
+
+<!-- Custom Alert -->
+<div id="customAlert" class="custom-alert">You rated this 5 stars!</div>
+
+<script>
+  const ratings = document.querySelectorAll('.star-rating input');
+  const alertBox = document.getElementById('customAlert');
+
+  ratings.forEach(radio => {
+    radio.addEventListener('change', function () {
+      showAlert(`You rated this ${this.value} star${this.value > 1 ? 's' : ''}!`);
+    });
+  });
+
+  function showAlert(message) {
+    alertBox.textContent = message;
+    alertBox.style.display = 'block';
+
+    setTimeout(() => {
+      alertBox.style.display = 'none';
+    }, 3000);
+  }
+</script>
+<br>
+  
   <a href="choresone.html" target="_blank" class="watch-btn"><b>▶ Watch Now </b></a>
 </div>
 
 <div class="natok-card">
   <img src="images (40) (12).jpeg" alt="BCS 2" class="natok-img">
   <h3 class="natok-title">BCS 2</h3>
+  
+  <style>
+  .star-rating {
+    direction: rtl;
+    display: inline-flex;
+    font-size: 24px;
+    user-select: none;
+  }
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  .star-rating label {
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 3px;
+  }
+  .star-rating input[type="radio"]:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: gold;
+  }
+
+  .custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  @keyframes fadein {
+    from {opacity: 0; top: 0;}
+    to {opacity: 1; top: 20px;}
+  }
+
+  @keyframes fadeout {
+    from {opacity: 1; top: 20px;}
+    to {opacity: 0; top: 0;}
+  }
+</style>
+
+
+  <!-- ⭐ Star Rating -->
+  <div class="star-rating">
+    <input type="radio" id="5-stars-tokkor" name="rating-tokkor" value="5">
+    <label for="5-stars-tokkor">★</label>
+    <input type="radio" id="4-stars-tokkor" name="rating-tokkor" value="4">
+    <label for="4-stars-tokkor">★</label>
+    <input type="radio" id="3-stars-tokkor" name="rating-tokkor" value="3">
+    <label for="3-stars-tokkor">★</label>
+    <input type="radio" id="2-stars-tokkor" name="rating-tokkor" value="2">
+    <label for="2-stars-tokkor">★</label>
+    <input type="radio" id="1-star-tokkor" name="rating-tokkor" value="1">
+    <label for="1-star-tokkor">★</label>
+  </div>
+
+
+
+
+<!-- Custom Alert -->
+<div id="customAlert" class="custom-alert">You rated this 5 stars!</div>
+
+<script>
+  const ratings = document.querySelectorAll('.star-rating input');
+  const alertBox = document.getElementById('customAlert');
+
+  ratings.forEach(radio => {
+    radio.addEventListener('change', function () {
+      showAlert(`You rated this ${this.value} star${this.value > 1 ? 's' : ''}!`);
+    });
+  });
+
+  function showAlert(message) {
+    alertBox.textContent = message;
+    alertBox.style.display = 'block';
+
+    setTimeout(() => {
+      alertBox.style.display = 'none';
+    }, 3000);
+  }
+</script>
+<br>
+  
   <a href="BCS 2.html" target="_blank" class="watch-btn"><b>▶ Watch Now </b></a>
 </div>
 
 <div class="natok-card">
   <img src="images (40) (21).jpeg" alt="BCS 2" class="natok-img">
   <h3 class="natok-title">Gorib Jamae</h3>
+  
+  <style>
+  .star-rating {
+    direction: rtl;
+    display: inline-flex;
+    font-size: 24px;
+    user-select: none;
+  }
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  .star-rating label {
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 3px;
+  }
+  .star-rating input[type="radio"]:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: gold;
+  }
+
+  .custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  @keyframes fadein {
+    from {opacity: 0; top: 0;}
+    to {opacity: 1; top: 20px;}
+  }
+
+  @keyframes fadeout {
+    from {opacity: 1; top: 20px;}
+    to {opacity: 0; top: 0;}
+  }
+</style>
+
+
+  <!-- ⭐ Star Rating -->
+  <div class="star-rating">
+    <input type="radio" id="5-stars-tokkor" name="rating-tokkor" value="5">
+    <label for="5-stars-tokkor">★</label>
+    <input type="radio" id="4-stars-tokkor" name="rating-tokkor" value="4">
+    <label for="4-stars-tokkor">★</label>
+    <input type="radio" id="3-stars-tokkor" name="rating-tokkor" value="3">
+    <label for="3-stars-tokkor">★</label>
+    <input type="radio" id="2-stars-tokkor" name="rating-tokkor" value="2">
+    <label for="2-stars-tokkor">★</label>
+    <input type="radio" id="1-star-tokkor" name="rating-tokkor" value="1">
+    <label for="1-star-tokkor">★</label>
+  </div>
+
+
+
+
+<!-- Custom Alert -->
+<div id="customAlert" class="custom-alert">You rated this 5 stars!</div>
+
+<script>
+  const ratings = document.querySelectorAll('.star-rating input');
+  const alertBox = document.getElementById('customAlert');
+
+  ratings.forEach(radio => {
+    radio.addEventListener('change', function () {
+      showAlert(`You rated this ${this.value} star${this.value > 1 ? 's' : ''}!`);
+    });
+  });
+
+  function showAlert(message) {
+    alertBox.textContent = message;
+    alertBox.style.display = 'block';
+
+    setTimeout(() => {
+      alertBox.style.display = 'none';
+    }, 3000);
+  }
+</script>
+<br>
+  
   <a href="goribjamae.html" target="_blank" class="watch-btn"><b>▶ Watch Now </b></a>
 </div>
 
 <div class="natok-card">
   <img src="hq720.jpg" alt="BCS 2" class="natok-img">
   <h3 class="natok-title">Amader Adu Vai</h3>
+  
+  <style>
+  .star-rating {
+    direction: rtl;
+    display: inline-flex;
+    font-size: 24px;
+    user-select: none;
+  }
+  .star-rating input[type="radio"] {
+    display: none;
+  }
+  .star-rating label {
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 3px;
+  }
+  .star-rating input[type="radio"]:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: gold;
+  }
+
+  .custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  @keyframes fadein {
+    from {opacity: 0; top: 0;}
+    to {opacity: 1; top: 20px;}
+  }
+
+  @keyframes fadeout {
+    from {opacity: 1; top: 20px;}
+    to {opacity: 0; top: 0;}
+  }
+</style>
+
+
+  <!-- ⭐ Star Rating -->
+  <div class="star-rating">
+    <input type="radio" id="5-stars-tokkor" name="rating-tokkor" value="5">
+    <label for="5-stars-tokkor">★</label>
+    <input type="radio" id="4-stars-tokkor" name="rating-tokkor" value="4">
+    <label for="4-stars-tokkor">★</label>
+    <input type="radio" id="3-stars-tokkor" name="rating-tokkor" value="3">
+    <label for="3-stars-tokkor">★</label>
+    <input type="radio" id="2-stars-tokkor" name="rating-tokkor" value="2">
+    <label for="2-stars-tokkor">★</label>
+    <input type="radio" id="1-star-tokkor" name="rating-tokkor" value="1">
+    <label for="1-star-tokkor">★</label>
+  </div>
+
+
+
+
+<!-- Custom Alert -->
+<div id="customAlert" class="custom-alert">You rated this 5 stars!</div>
+
+<script>
+  const ratings = document.querySelectorAll('.star-rating input');
+  const alertBox = document.getElementById('customAlert');
+
+  ratings.forEach(radio => {
+    radio.addEventListener('change', function () {
+      showAlert(`You rated this ${this.value} star${this.value > 1 ? 's' : ''}!`);
+    });
+  });
+
+  function showAlert(message) {
+    alertBox.textContent = message;
+    alertBox.style.display = 'block';
+
+    setTimeout(() => {
+      alertBox.style.display = 'none';
+    }, 3000);
+  }
+</script>
+<br>
+  
   <a href="aduvai.html" target="_blank" class="watch-btn"><b>▶ Watch Now </b></a>
 </div>
 </div>
@@ -93,6 +717,39 @@
     }
   });
 </script>
+
+
+<h2 class="typewriter" id="typingText"></h2>
+
+  <script>
+    const text = "Watch Natok!";
+    const typingElement = document.getElementById("typingText");
+    let index = 0;
+    let direction = 1;
+
+    function typeEffect() {
+      typingElement.textContent = text.substring(0, index);
+      index += direction;
+
+      if (index > text.length) {
+        direction = -1; // Start deleting
+        setTimeout(typeEffect, 1000); // Pause before deleting
+        return;
+      }
+
+      if (index < 0) {
+        direction = 1; // Start typing again
+        setTimeout(typeEffect, 1000); // Pause before typing again
+        return;
+      }
+
+      setTimeout(typeEffect, 150);
+    }
+
+    typeEffect();
+  </script>
+
+<br>
 
 <h4 style="display: inline; padding-left: 5px; ">Trending now 🔥</h4
   > 
