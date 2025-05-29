@@ -8,6 +8,11 @@
   
   <link rel="icon" type="image/png" href="ChatGPT Image May 24, 2025, 08_31_06 PM.png">
   <title>Natok Dekho - Watch Natok Free</title>
+  
+  
+  
+  
+  
 </head>
 
 <body>
@@ -23,9 +28,12 @@
 <hr class="hr">
 <br>
 
+<button id="darkModeBtn" onclick="toggleDarkMode()">☀️ Light Mode</button>
+<br>
 
-<div style="text-align: center; margin: 20px;">
-  <input type="text" id="searchBox" placeholder="Search Natok..." style="padding: 10px; width: 250px; border-radius: 5px; border: none;">
+
+<div  style="text-align: center; margin: 20px;">
+  <input class="sea" type="text" id="searchBox" placeholder="Search Natok..." style="padding: 10px; width: 250px; border-radius: 5px; border: none;">
 </div>
 
 <div class="natok-card">
@@ -719,6 +727,47 @@
 </script>
 
 
+
+
+<!-- Toggle Button -->
+  
+
+
+  <!-- JavaScript -->
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      const btn = document.getElementById("darkModeBtn");
+
+      body.classList.toggle("light-mode");
+
+      if (body.classList.contains("light-mode")) {
+        btn.textContent = "🌙 Dark Mode";
+        localStorage.setItem("theme", "light");
+      } else {
+        btn.textContent = "☀️ Light Mode";
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    // Load preference on page load
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      const body = document.body;
+      const btn = document.getElementById("darkModeBtn");
+
+      if (savedTheme === "light") {
+        body.classList.add("light-mode");
+        btn.textContent = "🌙 Dark Mode";
+      } else {
+        body.classList.remove("light-mode"); // Default dark
+        btn.textContent = "☀️ Light Mode";
+      }
+    };
+  </script>
+
+
+
 <h2 class="typewriter" id="typingText"></h2>
 
   <script>
@@ -854,4 +903,4 @@
   </div>
 </footer>
 </body>
-</html>
+  </html>
