@@ -41,7 +41,8 @@ body{
   margin: 0;
   padding: 0;
   margin-left: 5px;
-    
+    transition: transform 0.3s ease-in, border 0.1s ease-in;
+  border-radius: 10px;
   
 }
 .trimg {
@@ -295,7 +296,7 @@ body{
 
 
 
-    body.light-mode .natok-card {
+    body .light-mode .natok-card {
       background-color: #f9f9f9;
       color: black;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -322,3 +323,59 @@ body{
     body.light-mode .sea{
       background-color: #D4E3D9;
     }
+    
+    
+    @keyframes appear {
+        from {
+          opacity: 0;
+          clip-path: inset(100% 100% 0 0);
+        }
+        to {
+          opacity: 1;
+          clip-path: inset(0 0 0 0);
+        }
+      }
+
+      .block {
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 20%;
+      }
+
+
+.img:hover {
+  transform: scale(1.10); /* Zoom effect */
+  /* border: 3px solid #09B0F1;*/ /* Blue border on hover */
+  
+}
+
+
+
+.img {
+  display: inline-block;
+  padding: 0px;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  animation: borderPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes borderPulse {
+  0% {
+    border-color: yellow;
+    box-shadow: 0 0 0px yellow;
+  }
+  50% {
+    border-color: #fff700;
+    box-shadow: 0 0 10px yellow;
+  }
+  100% {
+    border-color: yellow;
+    box-shadow: 0 0 0px yellow;
+  }
+}
+
+.img {
+  border-radius: 6px;
+  display: block;
+  max-width: 100%;
+}
